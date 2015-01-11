@@ -1,4 +1,7 @@
-## Assume the data to be in the working directory!
+## Download and unzip the data file.
+download.file('https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip',
+              destfile='household_power_consumption.zip')
+unzip('household_power_consumption.zip')
 
 ## Read all the data at once. Then subset the data to only include the
 ## required observations.
@@ -15,5 +18,5 @@ date_time <- strptime(date_time,'%e/%m/%Y %T')
 ## Finally close the file.
 png(file='plot2.png',width=480,height=480)
 plot(date_time, data$Global_active_power,
-     ylab='Global Active Power (kilowatts', xlab='', type='l')
+     ylab='Global Active Power (kilowatts)', xlab='', type='l')
 dev.off()

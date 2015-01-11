@@ -1,4 +1,7 @@
-## Assume the data to be in the working directory!
+## Download and unzip the data file.
+download.file('https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip',
+              destfile='household_power_consumption.zip')
+unzip('household_power_consumption.zip')
 
 ## Read all the data at once. Then subset the data to only include the
 ## required observations.
